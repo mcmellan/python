@@ -1,0 +1,24 @@
+def bubbleSort(myNumbers):
+  for i in range(0,len(myNumbers)-1):
+    for j in range(0,len(myNumbers)-1-i):
+      if myNumbers[j]>myNumbers[j+1]:
+        myNumbers[j],myNumbers[j+1]=myNumbers[j+1],myNumbers[j]
+  return myNumbers
+
+theNumbers=[67, 45, 2, 13, 1, 998]
+print (bubbleSort(theNumbers))
+
+def selection_sort(items):
+  for i in range(0, len(items)-1):
+    minIndex=i
+    for j in range(i+1, len(items)):
+      if items[j]< items[minIndex]:
+        minIndex=j
+    if minIndex!=i:
+      items[i],items[minIndex]=items[minIndex],items[i]
+
+
+
+items=[89, 23, 33, 45, 10, 12, 45, 45, 45]
+selection_sort(items)
+print(items)
